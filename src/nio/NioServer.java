@@ -41,6 +41,7 @@ public class NioServer {
 					ByteBuffer buffer2 = ByteBuffer.allocate(50);
 					buffer2.put("Server response".getBytes());
 					System.out.println(new String(buffer2.array()));
+					buffer2.flip();
 					channel.write(buffer2);
 				}
 				
